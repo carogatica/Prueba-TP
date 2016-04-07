@@ -13,7 +13,6 @@ before_install:
 
   - sudo apt-get update -qq
   
-  - chmod +x gradlew
 
 install:
   # g++4.8.1
@@ -27,7 +26,3 @@ install:
 script: 
   - $CXX --version
 
-after_success:
-  - ./gradlew jacocoTestReport
-  - pip install --user codecov
-  - codecov 
